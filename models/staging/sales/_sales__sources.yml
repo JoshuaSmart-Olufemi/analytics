@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+
+  - name: sales # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: postgres # this is the name of our database
+
+    #freshness:
+      #warn_after: {count: 24, period: hour}
+      #error_after: {count: 48, period: hour}
+
+    tables:
+      - name: order_detail
+        description: >
+          Contains demographic information about each order detail
+
+      - name: order_header
+      - name: territory
