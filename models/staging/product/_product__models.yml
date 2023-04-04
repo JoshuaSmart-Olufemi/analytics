@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg__product_details
+    description: Demographics about each superhero such as name, hair color, height and weight. 
+    columns:
+      - name: Product ID
+        tests:
+          - not_null
+          - unique 
+  - name: stg__product_work_order
+  - name: stg__product_work_order_routing
+
+    quoting:
+      model: true
+      #schema: false
+      #identifier: false
