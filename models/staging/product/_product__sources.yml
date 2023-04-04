@@ -11,10 +11,8 @@ sources:
       #error_after: {count: 48, period: hour}
 
     tables:
-      - name: order_detail
+      - name: product_details
         description: >
-          Contains demographic information about each order detail
-
-      - name: order_header
-      - name: territory
-      - name: employees
+          Contains information about each product detail
+      - name: product_work_order
+      - name: product_work_order_routing

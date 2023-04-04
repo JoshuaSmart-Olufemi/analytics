@@ -10,3 +10,4 @@ models:
           - unique 
   - name: stg_sales__order_header
   - name: stg_sales__territory
+  - name: stg_sales__employees
