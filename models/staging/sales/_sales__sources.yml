@@ -11,7 +11,7 @@ sources:
       #error_after: {count: 48, period: hour}
 
     tables:
-      - name: order_detail
+      - name: order_details
         description: >
           Contains demographic information about each order detail
 

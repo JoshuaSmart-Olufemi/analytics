@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_sales_details
+    description: Demographics about each superhero such as name, hair color, height and weight. 
+    columns:
+      - name: sales_order_id
+        tests:
+          - not_null
+          - unique 

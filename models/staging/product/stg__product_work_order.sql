@@ -1,6 +1,6 @@
 with cte as (
     SELECT *
-    FROM {{ source('sales', 'product_work_order')}}
+    FROM {{ source('sales', 'work_order')}}
 )
 
 SELECT * FROM cte 
