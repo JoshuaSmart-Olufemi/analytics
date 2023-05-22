@@ -1,0 +1,17 @@
+ersion: 2
+
+sources:
+
+  - name: ecommerce # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: postgres # this is the name of our database
+
+    #freshness:
+      #warn_after: {count: 24, period: hour}
+      #error_after: {count: 48, period: hour}
+
+    tables:
+      - name: customers
+        description: >
+          Contains information about each customer
+      - name: revenue
