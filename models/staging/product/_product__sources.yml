@@ -14,5 +14,5 @@ sources:
       - name: product_details
         description: >
           Contains information about each product detail
-      - name: product_work_order
-      - name: product_work_order_routing
+      - name: work_order
+      - name: work_order_routing

@@ -9,9 +9,53 @@ models:
           - not_null
           - unique 
   - name: stg__product_work_order
+    columns:
+      - name: product_id
+        meta:
+          dimension:
+            type: number
+            label: 'product id'
+
+      - name: start_date
+        meta:
+          dimension:
+            time_intervals: ['RAW', 'DAY', 'WEEK', 'MONTH', 'YEAR']
+            type: date 
+            label: 'start date'
+
+      - name: end_date
+        meta:
+          dimension:
+            time_intervals: ['RAW', 'DAY', 'WEEK', 'MONTH', 'YEAR']
+            type: date
+            label: 'end date'
+
+      - name: due_date
+        meta:
+          dimension:
+            time_intervals: ['RAW', 'DAY', 'WEEK', 'MONTH', 'YEAR']
+            type: date
+            label: 'due date'
+
   - name: stg__product_work_order_routing
+    columns:
+      - name: work_order_id
+        meta:
+          dimension:
+            type: number
+            label: 'work order id'
+      
+      - name: planned_cost
+        meta:
+          metrics: planned_cost
+          label:
+          type: number
+          sql: ${stg__product_work_order_routing}.planned_cost
 
     quoting:
       model: true
+     
+
+    
       #schema: false
       #identifier: false

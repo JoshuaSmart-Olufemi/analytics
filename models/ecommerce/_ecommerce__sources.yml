@@ -2,7 +2,7 @@ version: 2
 
 sources:
 
-  - name: sales # name of the source 
+  - name: ecommerce # name of the source 
     schema: public # this is the schema our raw data lives in
     database: postgres # this is the name of our database
 
@@ -11,10 +11,9 @@ sources:
       #error_after: {count: 48, period: hour}
 
     tables:
-      - name: order_details
+      - name: customers
         description: >
-          Contains demographic information about each order detail
-
-      - name: order_header
-      - name: territory
-      - name: employees
+          Contains information about each customer
+      - name: revenue
+        description: >
+          Contains information about company revenue

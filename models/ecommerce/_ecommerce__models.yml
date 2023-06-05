@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__customers
+    description: Demographics about each superhero such as name, hair color, height and weight. 
+    columns:
+      - name: id
+        meta:
+          metrics: 
+            count_customers:
+              type: count_distinct
+          
+      - name: first_name
+        meta:
+          dimension:
+            label: " customer first name "
+            type: string
+      - name: last_name
+        meta:
+          dimension:
+            label: " Customer last name "
+            type: string
+      - name: created_at
+        meta:
+          dimension:
+            label: "Customer Created At Date"
+            type: date 
+  - name: stg_ecommerce__revenue
+    columns:
+      - name: customer_id
+
+        name: revenue
+        meta:
+          metrics:
+            revenue_sum: sum
+            sql: " SUM( ${stg_ecommerce_revenue} ) "
+            round: 1
