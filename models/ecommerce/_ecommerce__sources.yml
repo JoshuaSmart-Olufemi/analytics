@@ -15,3 +15,5 @@ sources:
         description: >
           Contains information about each customer
       - name: revenue
+        description: >
+          Contains information about company revenue

@@ -9,7 +9,7 @@ with cte as (
     , wo.order_qty
     , wo.stocked_qty
     , wo.scrapped_qty
-    , wo.start_date
+    , wo.start_date :: date 
     , wo.end_date
     , wo.due_date
     , wor.scheduled_start_date
